@@ -15,7 +15,10 @@ class Guitarist(Musician):
         self.name = name
 
     def __str__(self):
-         return f"My name is {self.name} and I play guitar"
+        return f"My name is {self.name} and I play guitar"
+
+    def __repr__(self):
+        return f"Guitarist instance. Name = {self.name}"
 
 
 # Derived class
@@ -23,8 +26,14 @@ class Bassist(Musician):
     def __init__(self, name):
         self.name = name
 
+    def __str__(self):
+        return f"My name is {self.name} and I play bass"
+
 
 # Derived class
 class Drummer(Musician):
     def __init__(self, name):
         self.name = name
+
+    def __str__(self):
+        return f"My name is {self.name} and I play drums"
