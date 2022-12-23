@@ -1,6 +1,11 @@
 class Band:
-    def __init__(self, musicians=None):
-        self.musicians = musicians or []
+    def __init__(self, name="unknown", members=None, solos=None):
+        self.name = name or []
+        self.members = members or []
+        self.solos = solos or []
+
+    # def play_solos(self):
+    #     return
 
 
 # base class
@@ -24,6 +29,9 @@ class Guitarist(Musician):
     def get_instrument(self):
         return self.instrument
 
+    def play_solo(self):
+        return f"face melting guitar solo"
+
 # Derived class
 class Drummer(Musician):
     def __init__(self, name,instrument="drums"):
@@ -38,6 +46,9 @@ class Drummer(Musician):
 
     def get_instrument(self):
         return self.instrument
+
+    def play_solo(self):
+        return f"rattle boom crash"
 
 
 # Derived class
@@ -54,3 +65,6 @@ class Bassist(Musician):
 
     def get_instrument(self):
         return self.instrument
+
+    def play_solo(self):
+        return f"bom bom buh bom"
